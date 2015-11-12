@@ -26,6 +26,19 @@ describe Biblio do
             expect(@nodo1.siguiente).to eq(nil)
         end
     end 
+    
+    context "Lista" do
+        it "Se extrae el primer elemento de la lista" do
+            @lista.push(@nodo5)
+            @lista.push(@nodo4)
+            @lista.push(@nodo3)
+            @lista.push(@nodo2)
+            @lista.push(@nodo1)
+            @lista.ext
+            expect(@lista.inicio).to eq(@nodo2)
+        end
+    end
+    
 =begin    
     describe "Metodos" do
     
