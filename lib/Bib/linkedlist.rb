@@ -20,5 +20,9 @@ class Lista
    
    def inicio
         @inicio
-   end    
+   end   
+   
+   def pop(nodo)
+        @inicio = @inicio.next
+   end
 end
