@@ -11,4 +11,10 @@ class Lista
             @inicio = nodo
         end        
    end
+   
+   def ext 
+        aux = @inicio
+        @inicio = @inicio.siguiente
+        aux.valor
+   end  
 end
