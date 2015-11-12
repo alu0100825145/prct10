@@ -37,6 +37,12 @@ describe Biblio do
             @lista.ext
             expect(@lista.inicio).to eq(@nodo2)
         end
+        
+        it "Se puede insertar un elemento" do
+            @lista.push(@nodo5)
+            expect(@lista.inicio).to eq(@nodo5)
+        end
+        
     end
     
 =begin    
