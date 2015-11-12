@@ -59,6 +59,11 @@ describe Biblio do
             @lista.ext
             expect(@lista.inicio).to eq(@nodo5)
         end
+        
+        it "Debe existir una lista con su cabeza" do
+            @lista.push(@nodo1)
+            expect(@lista.inicio).to eq(@nodo1)
+        end
     end
     
 =begin    
