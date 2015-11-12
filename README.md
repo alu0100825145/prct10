@@ -1,5 +1,4 @@
-Lenguajes y Paradigmas de Programación Práctica 6: Desarrollo Dirigido por Pruebas(TDD)
-Andrea Rodríguez Rivarés
+Lenguajes y Paradigmas de Programación Práctica 7: Programación Orientada a objetos
 Javier Castro González
 # Bib
 
