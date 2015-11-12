@@ -17,4 +17,8 @@ class Lista
         @inicio = @inicio.siguiente
         aux.valor
    end  
+   
+   def inicio
+        @inicio
+   end    
 end
