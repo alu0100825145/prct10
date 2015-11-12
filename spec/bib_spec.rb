@@ -43,6 +43,22 @@ describe Biblio do
             expect(@lista.inicio).to eq(@nodo5)
         end
         
+        it "Se pueden insertar varios elementos" do
+            @lista.push(@nodo5)
+            @lista.push(@nodo4)
+            @lista.push(@nodo3)
+            @lista.push(@nodo2)
+            @lista.push(@nodo1)
+            expect(@lista.inicio).to eq(@nodo1)
+            @lista.ext
+            expect(@lista.inicio).to eq(@nodo2)
+            @lista.ext
+            expect(@lista.inicio).to eq(@nodo3)
+            @lista.ext
+            expect(@lista.inicio).to eq(@nodo4)
+            @lista.ext
+            expect(@lista.inicio).to eq(@nodo5)
+        end
     end
     
 =begin    
