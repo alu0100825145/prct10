@@ -16,6 +16,8 @@ describe Biblio do
         @nodo4 = Nodostruct.new(@libro4)
         @nodo5 = Nodostruct.new(@libro5)
         
+        @lista = Lista.new(0)
+        
     end
 
 =begin    
