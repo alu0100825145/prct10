@@ -20,6 +20,12 @@ describe Biblio do
         
     end
 
+    context "Nodo" do
+        it "Debe existir un Nodo de la lista con sus datos y su siguiente" do
+            expect(@nodo1.valor).to eq(@libro1)
+            expect(@nodo1.siguiente).to eq(nil)
+        end
+    end 
 =begin    
     describe "Metodos" do
     
