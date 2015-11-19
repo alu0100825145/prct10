@@ -1,5 +1,5 @@
 class Biblio
-    
+    #Clase Padre
     attr_accessor :autores, :titulo, :fecha
         
     def initialize(autores, titulo, fecha)
@@ -18,3 +18,14 @@ class Biblio
         return @fecha
     end
 end
+    
+    #Clases Hijas en la Herencia
+    class Libros < Biblio
+        attr_accessor :editorial, :isbn
+        def initialize(editorial, isbn) 
+          @editorial = editorial
+          @isbn = isbn
+        end
+    end
+    
+
