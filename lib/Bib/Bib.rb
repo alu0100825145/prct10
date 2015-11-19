@@ -42,4 +42,13 @@ end
         end
     end
     
+    class Revistas < Biblio
+        attr_accessor :magazine, :issn
+        def initialize(magazine, issn)
+            @magazine = magazine
+            @issn = issn
+        end
+    end
+            
+    
 
