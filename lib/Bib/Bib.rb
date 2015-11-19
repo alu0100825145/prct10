@@ -23,8 +23,15 @@ end
     class Libros < Biblio
         attr_accessor :editorial, :isbn
         def initialize(editorial, isbn) 
-          @editorial = editorial
-          @isbn = isbn
+            @editorial = editorial
+            @isbn = isbn
+        end
+    end
+    
+    class Articulosweb < Biblio 
+        attr_accessor :url
+        def initialize(url) 
+            @url = url
         end
     end
     
