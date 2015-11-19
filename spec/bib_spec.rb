@@ -7,6 +7,7 @@ describe Biblio do
     before :each do
         @libro = Libros.new("CATEDRA", "ISBN: 9780828825115")
         @articuloweb = Articulosweb.new("www.dejensever.com/2015/11/08/las-cuevecitas-fs-vs-cfs-chinguaro-en-imagenes/")
+        @periodico = Periodicos.new("ElDia")
     end
     
     #Clases de la herencia
@@ -18,6 +19,10 @@ describe Biblio do
         it "Articulos Web" do
             expect(@articuloweb.is_a? Articulosweb).to eq(true)
             expect(@articuloweb.kind_of? Biblio).to eq(true)
+        end
+        it "Periodicos" do
+            expect(@periodico.is_a? Periodicos).to eq(true)
+            expect(@periodico.kind_of? Biblio).to eq(true)
         end
     end
     
