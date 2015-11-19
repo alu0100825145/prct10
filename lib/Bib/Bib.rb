@@ -35,4 +35,11 @@ end
         end
     end
     
+    class Periodicos < Biblio 
+        attr_accessor :newspaper
+        def initialize(newspaper) 
+            @newspaper = newspaper
+        end
+    end
+    
 
