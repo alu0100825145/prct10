@@ -11,5 +11,18 @@ class Double_List
     def empty? 
         @head == nil
     end
+    
+    #Metodo insertar
+    def insert(item) 
+        @nodo = Nodostruct.new(nil,item,nil)
+        @nodo.next = @head 
+        @nodo.prev = nil
+        if @tail == nil 
+            @tail = @nodo 
+        else 
+            @head.prev = @nodo
+        end
+        @head = @nodo 
+    end
       
 end
