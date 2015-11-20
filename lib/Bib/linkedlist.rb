@@ -24,5 +24,16 @@ class Double_List
         end
         @head = @nodo 
     end
-      
+    
+    #Metodo extraer
+    def extract 
+        extractnodo = @head 
+        @head = @head.next 
+        extractnodo.next = nil
+        extractnodo.prev = nil 
+        if @head == nil 
+          @tail = nil 
+        end
+        return extractnodo 
+    end
 end
