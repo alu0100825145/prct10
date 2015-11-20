@@ -47,4 +47,9 @@ describe "Pruebas para Listas" do
             expect(@nodo.next).to eq(nil)
         end
     end
+    describe "Pruebas Listas" do
+        it "Existe una lista y está vacía" do
+            expect(@doublelist.empty?).to eq(true)
+        end
+    end
 end
