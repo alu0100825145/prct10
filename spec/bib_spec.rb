@@ -80,5 +80,20 @@ describe "Pruebas para Listas" do
                 expect(@doublelist.empty?).to eq(true)
             end
         end
+        context "Recorrido Listas" do
+            it "Left to Right" do
+                @doublelist.insert(1)
+                @doublelist.insert(2)
+                expect(@doublelist.head.value).to eq(2)
+                expect(@doublelist.head.next.value).to eq(1)
+            end
+            
+            it "Right to Left" do
+                @doublelist.insert(1)
+                @doublelist.insert(2)
+                expect(@doublelist.tail.value).to eq(1)
+                expect(@doublelist.tail.prev.value).to eq(2)
+            end
+        end
     end
 end
