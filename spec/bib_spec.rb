@@ -30,6 +30,6 @@ describe Biblio do
             expect(@revista.kind_of? Biblio).to eq(true)
         end
     end
-    
-
 end
+
+#Pruebas Listas 
