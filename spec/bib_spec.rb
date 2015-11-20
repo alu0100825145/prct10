@@ -52,17 +52,33 @@ describe "Pruebas para Listas" do
             expect(@doublelist.empty?).to eq(true)
         end
         
-        #Pruebas Insertar
-        it "Se puede insertar un elemento en la lista" do
-            @doublelist.insert(1)
-            expect(@doublelist.head.value).to eq(1)
+        context "Pruebas Insertar" do
+            it "Se puede insertar un elemento en la lista" do
+                @doublelist.insert(1)
+                expect(@doublelist.head.value).to eq(1)
+            end
+            
+            it "Se puede insertar varios elementos en la lista" do
+                @doublelist.insert(1)
+                @doublelist.insert(2)
+                expect(@doublelist.head.value).to eq(2)
+                expect(@doublelist.head.next.value).to eq(1)
+            end
         end
-        
-        it "Se puede insertar varios elementos en la lista" do
-            @doublelist.insert(1)
-            @doublelist.insert(2)
-            expect(@doublelist.head.value).to eq(2)
-            expect(@doublelist.head.next.value).to eq(1)
+        context "Pruebas Extraer" do
+            it "Se puede extraer un elemento de la lista" do
+                @doublelist.insert(1)
+                @doublelist.extract
+                expect(@doublelist.empty?).to eq(true)
+            end
+            
+            it "Se puede extraer varios elementos de la lista" do
+                @doublelist.insert(1)
+                @doublelist.insert(2)
+                @doublelist.extract
+                @doublelist.extract
+                expect(@doublelist.empty?).to eq(true)
+            end
         end
     end
 end
