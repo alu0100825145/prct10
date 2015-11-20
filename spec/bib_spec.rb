@@ -33,3 +33,18 @@ describe Biblio do
 end
 
 #Pruebas Listas 
+
+describe "Pruebas para Listas" do
+    before :each do
+        @doublelist = Double_List.new(nil,nil)
+    end
+    
+    describe "Declaración de nodos" do
+        it "Existe un nodo con su previo, su valor y su siguiente" do
+            @nodo = Nodostruct.new(nil,1,nil)
+            expect(@nodo.prev).to eq(nil)
+            expect(@nodo.value).to eq(1)
+            expect(@nodo.next).to eq(nil)
+        end
+    end
+end
