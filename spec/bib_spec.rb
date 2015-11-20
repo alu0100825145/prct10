@@ -51,5 +51,18 @@ describe "Pruebas para Listas" do
         it "Existe una lista y está vacía" do
             expect(@doublelist.empty?).to eq(true)
         end
+        
+        #Pruebas Insertar
+        it "Se puede insertar un elemento en la lista" do
+            @doublelist.insert(1)
+            expect(@doublelist.head.value).to eq(1)
+        end
+        
+        it "Se puede insertar varios elementos en la lista" do
+            @doublelist.insert(1)
+            @doublelist.insert(2)
+            expect(@doublelist.head.value).to eq(2)
+            expect(@doublelist.head.next.value).to eq(1)
+        end
     end
 end
