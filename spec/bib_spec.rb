@@ -72,6 +72,12 @@ describe Double_List do
             @doublelist.insert(nil)
             expect(@doublelist.any?).to eq(false)
         end 
+        it "Comprobando el método member?" do
+            @doublelist.insert(3)
+            @doublelist.insert(2)
+            @doublelist.insert(1)
+            expect(@doublelist.member?(1)).to eq(true)
+        end
     end
 end 
 
