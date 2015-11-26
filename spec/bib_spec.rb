@@ -78,6 +78,12 @@ describe Double_List do
             @doublelist.insert(1)
             expect(@doublelist.member?(1)).to eq(true)
         end
+        it "Comprobando el método first" do
+            @doublelist.insert(3)
+            @doublelist.insert(2)
+            @doublelist.insert(1)
+            expect(@doublelist.first).to eq(1)
+        end
     end
 end 
 
