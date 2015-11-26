@@ -58,7 +58,7 @@ describe Double_List do
             @doublelist.insert(nil)
             @doublelist.insert(2)
             @doublelist.insert(3)
-            expect(@doublelist.all?).to eq(true)
+            expect(@doublelist.all?).to eq(false)
         end
 
     end

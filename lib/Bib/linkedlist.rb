@@ -1,6 +1,7 @@
 Nodostruct = Struct.new(:prev, :value, :next) 
 class Double_List
     attr_accessor :head, :tail
+    include Enumerable
     #Constructor
     def initialize(head, tail)   
         @head = head 
@@ -35,5 +36,15 @@ class Double_List
           @tail = nil 
         end
         return extractnodo 
+    end
+    
+    #Metodo each
+    
+    def each 
+        aux1 = @head
+        while aux1 != nil
+          yield aux1.value 
+          aux1 = aux1.next 
+        end
     end
 end
