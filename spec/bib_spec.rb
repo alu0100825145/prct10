@@ -39,6 +39,31 @@ describe Biblio do
 end
 
 
+#Pruebas Enumerable
+
+describe Double_List do
+    before :each do 
+        @doublelist = Double_List.new(nil,nil)
+    end
+    
+    describe "Lista Doble Enumerable" do
+        
+        it "Comprobando el método all? cuando estan todos los elementos" do
+            @doublelist.insert(1)
+            @doublelist.insert(2)
+            @doublelist.insert(3)
+            expect(@doublelist.all?).to eq(true)
+        end
+        it "Comprobando el método all? cuando falta un elemento" do
+            @doublelist.insert(nil)
+            @doublelist.insert(2)
+            @doublelist.insert(3)
+            expect(@doublelist.all?).to eq(true)
+        end
+
+    end
+end 
+
 
 
 
