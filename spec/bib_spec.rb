@@ -84,6 +84,18 @@ describe Double_List do
             @doublelist.insert(1)
             expect(@doublelist.first).to eq(1)
         end
+        
+        it "Comprobando el método sort" do
+            @doublelist.insert(4)
+            @doublelist.insert(2)
+            @doublelist.insert(5)
+            @doublelist.insert(1)
+            @doublelist.insert(6)
+            @doublelist.insert(3)
+            expect(@doublelist.sort).to eq([1, 2, 3, 4, 5, 6])
+            expect(@doublelist.sort.reverse).to eq([6, 5, 4, 3, 2, 1])
+        end
+        
     end
 end 
 
