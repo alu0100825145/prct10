@@ -112,6 +112,15 @@ describe Double_List do
             @doublelist.insert(22)
             expect(@doublelist.count).to eq(5)
         end
+        it "Comprobando el método drop" do
+            @doublelist.insert(44)
+            @doublelist.insert(22)
+            @doublelist.insert(26)
+            @doublelist.insert(13)
+            @doublelist.insert(43)
+            @doublelist.insert(73)
+            expect(@doublelist.drop(3)).to eq([26, 22, 44])
+        end
     end
 end 
 
