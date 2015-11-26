@@ -95,7 +95,15 @@ describe Double_List do
             expect(@doublelist.sort).to eq([1, 2, 3, 4, 5, 6])
             expect(@doublelist.sort.reverse).to eq([6, 5, 4, 3, 2, 1])
         end
-        
+        it "Comprobando metodos min y max" do
+            @doublelist.insert(5)
+            @doublelist.insert(4)
+            @doublelist.insert(22)
+            @doublelist.insert(7)
+            @doublelist.insert(6)
+            expect(@doublelist.max).to eq(22)
+            expect(@doublelist.min).to eq(4)
+        end
     end
 end 
 
