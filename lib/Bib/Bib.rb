@@ -1,6 +1,7 @@
 class Biblio
     #Clase Padre
     attr_accessor :autores, :titulo, :fecha
+    include Comparable
         
     def initialize(autores, titulo, fecha)
         @autores = autores
@@ -18,6 +19,15 @@ class Biblio
         return @fecha
     end
 end
+
+ # METODO COMPARABLE a partir de fecha
+    def <=>(other)
+        if other.is_a? Biblio
+          @fecha <=> other.fecha
+        else
+          false
+        end
+    end
     
     #Clases Hijas en la Herencia
     class Libros < Biblio

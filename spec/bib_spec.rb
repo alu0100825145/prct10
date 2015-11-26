@@ -17,7 +17,7 @@ describe Biblio do
         end  
         
         it "La referencia de Romeo y Julieta es menor que la de Otelo" do
-          expect(@biblio3 < @references).to eq(true)
+          expect(@biblio3 < @biblio).to eq(true)
         end
         it "La referencia de La prueba de los amigos es menor o igual que la de Otelo" do
           expect(@biblio2 <= @biblio).to eq(true)
