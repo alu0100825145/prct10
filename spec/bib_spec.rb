@@ -104,6 +104,14 @@ describe Double_List do
             expect(@doublelist.max).to eq(22)
             expect(@doublelist.min).to eq(4)
         end
+        it "Comprobando el método count para contar la cantidad de elementos insertados" do
+            @doublelist.insert(15)
+            @doublelist.insert(23)
+            @doublelist.insert(35)
+            @doublelist.insert(42)
+            @doublelist.insert(22)
+            expect(@doublelist.count).to eq(5)
+        end
     end
 end 
 
