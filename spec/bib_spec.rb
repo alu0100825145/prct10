@@ -17,6 +17,9 @@ describe Biblio do
             expect(@libro.is_a? Libros).to eq(true)
             expect(@libro.kind_of? Biblio).to eq(true)
         end 
+        it "Una instancia de Libros" do
+            expect(@libro.instance_of? Biblio).to eq(false)
+        end
         it "Articulos Web" do
             expect(@articuloweb.is_a? Articulosweb).to eq(true)
             expect(@articuloweb.kind_of? Biblio).to eq(true)
