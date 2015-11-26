@@ -14,7 +14,26 @@ describe Biblio do
           @biblio1 = Biblio.new("Miguel Cervantes","El Quijote","1605")
           @biblio2 = Biblio.new("Lope de Vega", "La Prueba de los amigos", "1604")
           @biblio3 = Biblio.new("William Shakespeare", "Romeo y Julieta", "1595")
-        end    
+        end  
+        
+        it "La referencia de Romeo y Julieta es menor que la de Otelo" do
+          expect(@biblio3 < @references).to eq(true)
+        end
+        it "La referencia de La prueba de los amigos es menor o igual que la de Otelo" do
+          expect(@biblio2 <= @biblio).to eq(true)
+        end
+        it "La referencia de La prueba de los amigos es igual que la de Otelo"  do
+          expect(@biblio2 == @biblio).to eq(true)
+        end
+        it "La referencia de El Quijote es mayor o igual que la de Otelo" do
+          expect(@biblio1 >= @biblio).to eq(true)
+        end
+        it "La referencia de El Quijote es mayor que la de Otelo" do
+          expect(@biblio1 > @biblio).to eq(true)
+        end
+        it "La referencia de Rubok Anthy no es igual que la de Otelo" do
+          expect(@biblio3 == @biblio).to eq(false)
+        end
     end
     
 end
