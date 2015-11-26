@@ -1,6 +1,28 @@
 require "spec_helper"
 require "Bib"
 
+
+#Pruebas Comparable
+
+describe Biblio do
+    before :each do
+       @biblio = Biblio.new("William Shakespeare", "Otelo", "1604")
+    end
+  
+    describe "Comparaciones teniendo en cuenta la fecha" do
+        before :each do
+          @biblio1 = Biblio.new("Miguel Cervantes","El Quijote","1605")
+          @biblio2 = Biblio.new("Lope de Vega", "La Prueba de los amigos", "1604")
+          @biblio3 = Biblio.new("William Shakespeare", "Romeo y Julieta", "1595")
+        end    
+    end
+    
+end
+
+
+
+
+
 #Clase Padre
 
 describe Biblio do
