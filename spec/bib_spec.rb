@@ -60,7 +60,18 @@ describe Double_List do
             @doublelist.insert(3)
             expect(@doublelist.all?).to eq(false)
         end
-
+        it "Comprobando el método any? cuando falta algun elemento" do
+            @doublelist.insert(1)
+            @doublelist.insert(nil)
+            @doublelist.insert(nil)
+            expect(@doublelist.any?).to eq(true)
+        end
+        it "Comprobando el método any? cuando faltan todos los elementos" do
+            @doublelist.insert(nil)
+            @doublelist.insert(nil)
+            @doublelist.insert(nil)
+            expect(@doublelist.any?).to eq(false)
+        end 
     end
 end 
 
