@@ -48,44 +48,44 @@ describe Double_List do
     
     describe "Lista Doble Enumerable" do
         
-        it "Comprobando el método all? cuando estan todos los elementos" do
+        it "Comprobando el metodo all? cuando estan todos los elementos" do
             @doublelist.insert(1)
             @doublelist.insert(2)
             @doublelist.insert(3)
             expect(@doublelist.all?).to eq(true)
         end
-        it "Comprobando el método all? cuando falta un elemento" do
+        it "Comprobando el metodo all? cuando falta un elemento" do
             @doublelist.insert(nil)
             @doublelist.insert(2)
             @doublelist.insert(3)
             expect(@doublelist.all?).to eq(false)
         end
-        it "Comprobando el método any? cuando falta algun elemento" do
+        it "Comprobando el metodo any? cuando falta algun elemento" do
             @doublelist.insert(1)
             @doublelist.insert(nil)
             @doublelist.insert(nil)
             expect(@doublelist.any?).to eq(true)
         end
-        it "Comprobando el método any? cuando faltan todos los elementos" do
+        it "Comprobando el metodo any? cuando faltan todos los elementos" do
             @doublelist.insert(nil)
             @doublelist.insert(nil)
             @doublelist.insert(nil)
             expect(@doublelist.any?).to eq(false)
         end 
-        it "Comprobando el método member?" do
+        it "Comprobando el metodo member?" do
             @doublelist.insert(3)
             @doublelist.insert(2)
             @doublelist.insert(1)
             expect(@doublelist.member?(1)).to eq(true)
         end
-        it "Comprobando el método first" do
+        it "Comprobando el metodo first" do
             @doublelist.insert(3)
             @doublelist.insert(2)
             @doublelist.insert(1)
             expect(@doublelist.first).to eq(1)
         end
         
-        it "Comprobando el método sort" do
+        it "Comprobando el metodo sort" do
             @doublelist.insert(4)
             @doublelist.insert(2)
             @doublelist.insert(5)
@@ -104,7 +104,7 @@ describe Double_List do
             expect(@doublelist.max).to eq(22)
             expect(@doublelist.min).to eq(4)
         end
-        it "Comprobando el método count para contar la cantidad de elementos insertados" do
+        it "Comprobando el metodo count para contar la cantidad de elementos insertados" do
             @doublelist.insert(15)
             @doublelist.insert(23)
             @doublelist.insert(35)
@@ -112,7 +112,7 @@ describe Double_List do
             @doublelist.insert(22)
             expect(@doublelist.count).to eq(5)
         end
-        it "Comprobando el método drop" do
+        it "Comprobando el metodo drop" do
             @doublelist.insert(44)
             @doublelist.insert(22)
             @doublelist.insert(26)
@@ -121,7 +121,7 @@ describe Double_List do
             @doublelist.insert(73)
             expect(@doublelist.drop(3)).to eq([26, 22, 44])
         end
-        it "Comprobando el método detect para detectar elementos en la lista" do
+        it "Comprobando el metodo detect para detectar elementos en la lista" do
             @doublelist.insert(44)
             @doublelist.insert(22)
             @doublelist.insert(26)
