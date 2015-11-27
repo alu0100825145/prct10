@@ -178,7 +178,7 @@ describe "Pruebas para Listas" do
         @doublelist = Double_List.new(nil,nil)
     end
     
-    describe "Declaración de nodos" do
+    describe "Declaracion de nodos" do
         it "Existe un nodo con su previo, su valor y su siguiente" do
             @nodo = Nodostruct.new(nil,1,nil)
             expect(@nodo.prev).to eq(nil)
@@ -187,7 +187,7 @@ describe "Pruebas para Listas" do
         end
     end
     describe "Pruebas Listas" do
-        it "Existe una lista y está vacía" do
+        it "Existe una lista y esta vacia" do
             expect(@doublelist.empty?).to eq(true)
         end
         
