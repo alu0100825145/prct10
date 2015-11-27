@@ -121,6 +121,16 @@ describe Double_List do
             @doublelist.insert(73)
             expect(@doublelist.drop(3)).to eq([26, 22, 44])
         end
+        it "Comprobando el método detect para detectar elementos en la lista" do
+            @doublelist.insert(44)
+            @doublelist.insert(22)
+            @doublelist.insert(26)
+            @doublelist.insert(13)
+            @doublelist.insert(43)
+            @doublelist.insert(73)
+            expect(@doublelist.detect {|x| x == 22}).to eq(22)
+            expect(@doublelist.find {|x| x == 44}).to eq(44)
+        end
     end
 end 
 
