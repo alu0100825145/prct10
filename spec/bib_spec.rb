@@ -5,10 +5,16 @@ require "Bib"
 #Pruebas Comparable
 
 describe Biblio do
-    before :each do
-       @biblio = Biblio.new("William Shakespeare", "Otelo", "1604")
+    before :all do
+       @libro = Libros.new(["Javi Agache","Pepe Cangrejo"], "Historias Uruguay", "2014", "Dejensever", "44")
+       @articuloweb = Articulosweb.new("Javi Agache", "Galería De Imagenes", "2015", "http://dejensever.com/2015/11/29/gomera-fs-vs-iberia-toscal/")
+       @revista = Revistas.new(["Dani Kome","Sergio Aragoneses"], "Imagenes De Un Ascenso", "2009", "Instagram", "899")
+       @periodico = Periodicos.new(["Javi Agache", "Yeray ElArrugado"], "Permanencia", "2016", "Miopinion")
     end
-  
+
+end
+
+=begin  
     describe "Comparaciones teniendo en cuenta la fecha" do
         before :each do
           @biblio1 = Biblio.new("Miguel Cervantes","El Quijote","1605")
@@ -236,3 +242,4 @@ describe "Pruebas para Listas" do
         end
     end
 end
+=end

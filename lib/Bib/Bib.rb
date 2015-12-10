@@ -32,7 +32,7 @@ end
     #Clases Hijas en la Herencia
     class Libros < Biblio
         attr_accessor :editorial, :isbn
-        def initialize(editorial, isbn) 
+        def initialize(autores, titulo, fecha, editorial, isbn) 
             @editorial = editorial
             @isbn = isbn
         end
@@ -40,21 +40,21 @@ end
     
     class Articulosweb < Biblio 
         attr_accessor :url
-        def initialize(url) 
+        def initialize(autores, titulo, fecha, url) 
             @url = url
         end
     end
     
     class Periodicos < Biblio 
         attr_accessor :newspaper
-        def initialize(newspaper) 
+        def initialize(autores, titulo, fecha, newspaper) 
             @newspaper = newspaper
         end
     end
     
     class Revistas < Biblio
         attr_accessor :magazine, :issn
-        def initialize(magazine, issn)
+        def initialize(autores, titulo, fecha, magazine, issn)
             @magazine = magazine
             @issn = issn
         end
