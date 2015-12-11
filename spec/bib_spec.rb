@@ -31,6 +31,12 @@ describe Biblio do
         @aparef.insertref(@articuloweb)
         expect(@aparef.to_s).to eq("Agache, J. & Layton, M., Galería De Imagenes (2015), http://dejensever.com/2015/11/29/gomera-fs-vs-iberia-toscal/")
     end
+    
+    it "prueba periodico" do
+        @aparef = APAref.new()
+        @aparef.insertref(@periodico)
+        expect(@aparef.to_s).to eq("Agache, J. & ElArrugado, Y., Permanencia (2016), Miopinion")
+    end
 end
 
 =begin  
