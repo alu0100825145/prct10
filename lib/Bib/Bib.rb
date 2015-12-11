@@ -77,7 +77,12 @@ end
     class Periodicos < Biblio 
         attr_accessor :newspaper
         def initialize(autores, titulo, fecha, newspaper) 
+            super(autores, titulo, fecha)
             @newspaper = newspaper
+        end
+        def to_s 
+            atributoslibro = "" 
+            atributoslibro << @autores << ", " << @titulo << " (" << @fecha << "), "  << @newspaper 
         end
     end
     

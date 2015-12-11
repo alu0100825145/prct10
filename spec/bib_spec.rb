@@ -37,6 +37,12 @@ describe Biblio do
         @aparef.insertref(@periodico)
         expect(@aparef.to_s).to eq("Agache, J. & ElArrugado, Y., Permanencia (2016), Miopinion")
     end
+    
+    it "prueba revistas" do
+        @aparef = APAref.new()
+        @aparef.insertref(@revista)
+        expect(@aparef.to_s).to eq("Kome, D. & Aragoneses, S., Imagenes De Un Ascenso (2009), Instagram. (899).")
+    end
 end
 
 =begin  
