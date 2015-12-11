@@ -12,12 +12,18 @@ describe Biblio do
        @periodico = Periodicos.new(["Javi Agache", "Yeray ElArrugado"], "Permanencia", "2016", "Miopinion")
     end
 
-    it "prueba" do
+    it "prueba insertar referencias en la lista" do
         @aparef = APAref.new()
         @aparef.insertref(@libro)
         @aparef.insertref(@articuloweb)
         @aparef.insertref(@revista)
         @aparef.insertref(@periodico)
+    end
+    
+    it "prueba libros" do
+        @aparef = APAref.new()
+        @aparef.insertref(@libro)
+        expect(@aparef.to_s).to eq("Agache, J. & Cangrejo, P., Historias Uruguay (2014), Dejensever. (44).")
     end
 end
 

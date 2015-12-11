@@ -8,5 +8,5 @@ class APAref
 		
 	def insertref(ref) 
 		@list.insert(ref)
-	end    
+	end  
 end

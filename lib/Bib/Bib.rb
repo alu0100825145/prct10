@@ -29,6 +29,7 @@ end
         end
     end
     
+
     #Clases Hijas en la Herencia
     class Libros < Biblio
         attr_accessor :editorial, :isbn
@@ -37,6 +38,9 @@ end
             @isbn = isbn
         end
     end
+        
+     
+
     
     class Articulosweb < Biblio 
         attr_accessor :url
