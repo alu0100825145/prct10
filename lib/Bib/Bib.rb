@@ -4,7 +4,7 @@ class Biblio
     include Comparable
         
     def initialize(autores, titulo, fecha)
-        @autores = autores
+        @autores = autoresinvert(autores)
         @titulo = titulo
         @fecha = fecha
     end
@@ -29,14 +29,33 @@ end
         end
     end
     
-
+    def autoresinvert(autores) 
+        arrayautores = "" 
+        autores.each do |word| 
+          	palabra = word.split(/\W+/) 
+          	arrayautores += palabra[1] 
+          	arrayautores += ", " 
+          	arrayautores += palabra[0][0] 
+          	arrayautores += "." 
+          	    unless word == autores.last 
+          		    arrayautores += " & " 
+          		end
+    		end		
+    		return arrayautores 
+	end
     #Clases Hijas en la Herencia
     class Libros < Biblio
         attr_accessor :editorial, :isbn
         def initialize(autores, titulo, fecha, editorial, isbn) 
+            super(autores, titulo, fecha)
             @editorial = editorial
             @isbn = isbn
         end
+        def to_s 
+            atributoslibro = "" 
+            atributoslibro << @autores << ", " << @titulo << " (" << @fecha << "), "  << @editorial << "." <<" (" << @isbn << ")."
+        end    
+        
     end
         
      
