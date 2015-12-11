@@ -7,7 +7,7 @@ require "Bib"
 describe Biblio do
     before :all do
        @libro = Libros.new(["Javi Agache","Pepe Cangrejo"], "Historias Uruguay", "2014", "Dejensever", "44")
-       @articuloweb = Articulosweb.new("Javi Agache", "Galería De Imagenes", "2015", "http://dejensever.com/2015/11/29/gomera-fs-vs-iberia-toscal/")
+       @articuloweb = Articulosweb.new(["Javi Agache","Mat Layton"], "Galería De Imagenes", "2015", "http://dejensever.com/2015/11/29/gomera-fs-vs-iberia-toscal/")
        @revista = Revistas.new(["Dani Kome","Sergio Aragoneses"], "Imagenes De Un Ascenso", "2009", "Instagram", "899")
        @periodico = Periodicos.new(["Javi Agache", "Yeray ElArrugado"], "Permanencia", "2016", "Miopinion")
     end
@@ -24,6 +24,12 @@ describe Biblio do
         @aparef = APAref.new()
         @aparef.insertref(@libro)
         expect(@aparef.to_s).to eq("Agache, J. & Cangrejo, P., Historias Uruguay (2014), Dejensever. (44).")
+    end
+
+    it "prueba articulos web" do
+        @aparef = APAref.new()
+        @aparef.insertref(@articuloweb)
+        expect(@aparef.to_s).to eq("Agache, J. & Layton, M., Galería De Imagenes (2015), http://dejensever.com/2015/11/29/gomera-fs-vs-iberia-toscal/")
     end
 end
 

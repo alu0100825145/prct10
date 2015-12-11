@@ -64,8 +64,10 @@ end
     class Articulosweb < Biblio 
         attr_accessor :url
         def initialize(autores, titulo, fecha, url) 
+
             @url = url
         end
+
     end
     
     class Periodicos < Biblio 
