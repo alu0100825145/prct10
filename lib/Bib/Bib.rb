@@ -69,8 +69,8 @@ end
         end
         
         def to_s 
-            atributoslibro = "" 
-            atributoslibro << @autores << ", " << @titulo << " (" << @fecha << "), "  << @url 
+            atributosweb = "" 
+            atributosweb << @autores << ", " << @titulo << " (" << @fecha << "), "  << @url 
         end
     end
     
@@ -81,16 +81,21 @@ end
             @newspaper = newspaper
         end
         def to_s 
-            atributoslibro = "" 
-            atributoslibro << @autores << ", " << @titulo << " (" << @fecha << "), "  << @newspaper 
+            atributosperiodico = "" 
+            atributosperiodico << @autores << ", " << @titulo << " (" << @fecha << "), "  << @newspaper 
         end
     end
     
     class Revistas < Biblio
         attr_accessor :magazine, :issn
         def initialize(autores, titulo, fecha, magazine, issn)
+            super(autores, titulo, fecha)
             @magazine = magazine
             @issn = issn
+        end
+        def to_s 
+            atributosrevista = "" 
+            atributosrevista << @autores << ", " << @titulo << " (" << @fecha << "), "  << @magazine << "." <<" (" << @issn << ")."
         end
     end
             
